@@ -8,35 +8,43 @@ datasource db {
 }
 
 model Profile {
-  id          Int     @id @default(autoincrement())
+  id          Int          @id @default(autoincrement())
   name        String
   description String
   github      String
   skills      Skill[]
-  experience Experience[]
+  experience  Experience[]
   projects    Project[]
-
 }
 
-model Skill{
-  id          Int     @id @default(autoincrement())
-  name        String
-  profileId   Int
-  profile     Profile @relation(fields: [profileId], references: [id])
+model Skill {
+  id        Int        @id @default(autoincrement())
+  name      String
+  level     SkillLevel
+  profileId Int
+  profile   Profile    @relation(fields: [profileId], references: [id])
 }
 
-model Experience{
-  id          Int     @id @default(autoincrement())
-  company     String
-  position    String
-  profileId   Int
-  profile     Profile @relation(fields: [profileId], references: [id])
+enum SkillLevel {
+  BASIC
+  INTERMEDIATE
 }
 
-model Project{
-  id          Int     @id @default(autoincrement())
-  name        String
-  url         String
-  profileId   Int
-  profile     Profile @relation(fields: [profileId], references: [id])
+model Experience {
+  id           Int       @id @default(autoincrement())
+  company      String
+  position     String
+  startDate    DateTime
+  endDate      DateTime?
+  achievements String[]
+  profileId    Int
+  profile      Profile   @relation(fields: [profileId], references: [id])
+}
+
+model Project {
+  id        Int     @id @default(autoincrement())
+  name      String
+  url       String
+  profileId Int
+  profile   Profile @relation(fields: [profileId], references: [id])
 }

@@ -1,6 +1,10 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service.js';
-import { initialExperience, initialProjects, initialSkills } from './initial-data.js';
+import {
+  initialExperience,
+  initialProjects,
+  initialSkills,
+} from './initial-data.js';
 
 @Injectable()
 export class DatabaseInitializerService implements OnModuleInit {
@@ -22,9 +26,7 @@ export class DatabaseInitializerService implements OnModuleInit {
             create: initialProjects,
           },
           skills: {
-            create: initialSkills.map((name) => ({
-              name,
-            })),
+            create: initialSkills,
           },
         },
       });

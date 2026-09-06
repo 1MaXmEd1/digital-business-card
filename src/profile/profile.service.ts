@@ -13,12 +13,16 @@ export class ProfileService {
         skills: {
           select: {
             name: true,
+            level: true,
           },
         },
         experience: {
           select: {
             company: true,
             position: true,
+            startDate: true,
+            endDate: true,
+            achievements: true,
           },
         },
         projects: {
