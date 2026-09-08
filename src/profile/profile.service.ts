@@ -3,7 +3,7 @@ import { PrismaService } from '../prisma/prisma.service.js';
 
 @Injectable()
 export class ProfileService {
-  constructor(private readonly prismaService: PrismaService) {}
+  // constructor(private readonly prismaService: PrismaService) {}
   // async getProfile() {
   //   const profile = await this.prismaService.profile.findFirst({
   //     select: {
