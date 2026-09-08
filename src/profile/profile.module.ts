@@ -4,8 +4,8 @@ import { ProfileResolver } from './profile.resolver.js';
 import { PrismaModule } from '../prisma/prisma.module.js';
 
 @Module({
-  // imports: [PrismaModule],
+  imports: [PrismaModule],
   // providers: [ProfileService, ProfileResolver],
-  providers: [ProfileResolver],
+  providers: [ProfileService],
 })
 export class ProfileModule {}
