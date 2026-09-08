@@ -5,7 +5,6 @@ import { PrismaModule } from '../prisma/prisma.module.js';
 
 @Module({
   imports: [PrismaModule],
-  // providers: [ProfileService, ProfileResolver],
-  providers: [ProfileService],
+  providers: [ProfileService, ProfileResolver],
 })
 export class ProfileModule {}
