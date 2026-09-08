@@ -15,7 +15,7 @@ import { DatabaseInitializerModule } from './database/database-initializer.modul
       isGlobal: true,
     }),
     ProfileModule,
-    DatabaseInitializerModule,
+    // DatabaseInitializerModule,
   ],
 })
 export class AppModule {}
