@@ -5,6 +5,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ConfigModule } from '@nestjs/config';
 import { DatabaseInitializerModule } from './database/database-initializer.module.js';
 import { AppResolver } from './app.resolver.js';
+import { AppService } from './app.service.js';
 
 @Module({
   imports: [
@@ -19,5 +20,7 @@ import { AppResolver } from './app.resolver.js';
     AppResolver,
     DatabaseInitializerModule,
   ],
+  controllers: [AppResolver],
+  providers: [AppService],
 })
 export class AppModule {}
