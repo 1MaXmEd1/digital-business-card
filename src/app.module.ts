@@ -16,7 +16,7 @@ import { AppResolver } from './app.resolver.js';
       isGlobal: true,
     }),
     // ProfileModule,
-    AppResolver,
+    // AppResolver,
     DatabaseInitializerModule,
   ],
 })
