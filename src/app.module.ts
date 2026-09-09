@@ -11,7 +11,7 @@ import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: true,
-      csrfPrevention: false,
+      introspection: true,
       plugins: [ApolloServerPluginLandingPageLocalDefault()], 
     }),
     ConfigModule.forRoot({

@@ -10,9 +10,12 @@ async function bootstrap(expressInstance: any) {
     AppModule,
     new ExpressAdapter(expressInstance),
   );
-  
-  app.enableCors(); 
-  
+
+  app.enableCors({
+    origin: ['https://studio.apollographql.com', 'http://localhost:3000'],
+    credentials: true,
+  });
+
   await app.init();
 }
 
