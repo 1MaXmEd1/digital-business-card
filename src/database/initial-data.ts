@@ -1,4 +1,4 @@
-import { SkillLevel } from '../generated/prisma/enums.js';
+import { SkillLevel } from '@prisma/client';
 
 export const initialSkills = [
   { name: 'JavaScript', level: SkillLevel.INTERMEDIATE },

@@ -1,10 +1,10 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import { PrismaService } from '../prisma/prisma.service.js';
 import {
   initialExperience,
   initialProjects,
   initialSkills,
 } from './initial-data.js';
+import { PrismaService } from '../prisma/prisma.service.js';
 
 @Injectable()
 export class DatabaseInitializerService implements OnModuleInit {
