@@ -12,7 +12,15 @@ import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin
       driver: ApolloDriver,
       autoSchemaFile: true,
       introspection: true,
-      plugins: [ApolloServerPluginLandingPageLocalDefault()], 
+      plugins: [
+        ApolloServerPluginLandingPageLocalDefault({
+          embed: true,
+          includeCookies: true,
+          headers: {
+            'apollo-require-preflight': 'true',
+          },
+        }),
+      ],
     }),
     ConfigModule.forRoot({
       isGlobal: true,

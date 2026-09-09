@@ -16,7 +16,7 @@ async function bootstrap(expressInstance: any) {
       'https://studio.apollographql.com', 
       'http://localhost:3000'
     ],
-    credentials: true, // Позволяет обмениваться куками и заголовками авторизации
+    credentials: true,
     allowedHeaders: ['content-type', 'apollo-require-preflight', 'authorization'],
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   }); 
