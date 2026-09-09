@@ -10,6 +10,7 @@ import { DatabaseInitializerModule } from './database/database-initializer.modul
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: true,
+      csrfPrevention: false, 
     }),
     ConfigModule.forRoot({
       isGlobal: true,
