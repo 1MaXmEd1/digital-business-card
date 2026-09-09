@@ -18,6 +18,11 @@ model Profile {
   projects    Project[]
 }
 
+enum SkillLevel {
+  BASIC
+  INTERMEDIATE
+}
+
 model Skill {
   id        Int        @id @default(autoincrement())
   name      String
@@ -26,10 +31,6 @@ model Skill {
   profile   Profile    @relation(fields: [profileId], references: [id])
 }
 
-enum SkillLevel {
-  BASIC
-  INTERMEDIATE
-}
 
 model Experience {
   id           Int       @id @default(autoincrement())
