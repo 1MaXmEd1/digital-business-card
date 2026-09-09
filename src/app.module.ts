@@ -4,6 +4,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ConfigModule } from '@nestjs/config';
 import { DatabaseInitializerModule } from './database/database-initializer.module.js';
+import { AppResolver } from './app.resolver.js';
 
 @Module({
   imports: [
@@ -14,7 +15,8 @@ import { DatabaseInitializerModule } from './database/database-initializer.modul
     ConfigModule.forRoot({
       isGlobal: true,
     }),
-    ProfileModule,
+    // ProfileModule,
+    AppResolver,
     DatabaseInitializerModule,
   ],
 })
