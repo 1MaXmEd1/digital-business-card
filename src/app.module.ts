@@ -14,7 +14,7 @@ import { DatabaseInitializerModule } from './database/database-initializer.modul
     ConfigModule.forRoot({
       isGlobal: true,
     }),
-    // ProfileModule,
+    ProfileModule,
     DatabaseInitializerModule,
   ],
 })
