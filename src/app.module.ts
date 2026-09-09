@@ -17,7 +17,7 @@ import { AppService } from './app.service.js';
       isGlobal: true,
     }),
     // ProfileModule,
-    AppResolver,
+    // AppResolver,
     DatabaseInitializerModule,
   ],
   controllers: [AppResolver],
