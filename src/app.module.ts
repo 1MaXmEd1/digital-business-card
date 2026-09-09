@@ -8,10 +8,10 @@ import { AppResolver } from './app.resolver.js';
 
 @Module({
   imports: [
-    GraphQLModule.forRoot<ApolloDriverConfig>({
-      driver: ApolloDriver,
-      autoSchemaFile: true,
-    }),
+    // GraphQLModule.forRoot<ApolloDriverConfig>({
+    //   driver: ApolloDriver,
+    //   autoSchemaFile: true,
+    // }),
     ConfigModule.forRoot({
       isGlobal: true,
     }),
