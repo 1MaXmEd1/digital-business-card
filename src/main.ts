@@ -12,9 +12,14 @@ async function bootstrap(expressInstance: any) {
   );
 
   app.enableCors({
-    origin: ['https://studio.apollographql.com', 'http://localhost:3000'],
-    credentials: true,
-  });
+    origin: [
+      'https://studio.apollographql.com', 
+      'http://localhost:3000'
+    ],
+    credentials: true, // Позволяет обмениваться куками и заголовками авторизации
+    allowedHeaders: ['content-type', 'apollo-require-preflight', 'authorization'],
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  }); 
 
   await app.init();
 }
