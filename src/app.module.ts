@@ -4,8 +4,9 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ConfigModule } from '@nestjs/config';
 import { DatabaseInitializerModule } from './database/database-initializer.module.js';
-import { AppResolver } from './app.resolver.js';
 import { AppService } from './app.service.js';
+import { AppController } from './app.controller.js';
+import { AppResolver } from './app.resolver.js';
 
 @Module({
   imports: [
@@ -20,7 +21,7 @@ import { AppService } from './app.service.js';
     // AppResolver,
     DatabaseInitializerModule,
   ],
-  controllers: [AppResolver],
-  providers: [AppService],
+  controllers: [AppController],
+  providers: [AppService, AppResolver],
 })
 export class AppModule {}
